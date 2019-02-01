@@ -10,7 +10,7 @@ FastLED.show();
 
 void setAll(byte red, byte green, byte blue) {
   for(int i = 0; i < NUM_LEDS; i++ ){
-  setPixels(i, red, green, blue);
+  setPixel(i, red, green, blue);
     
   }
   showStrip();
@@ -21,10 +21,10 @@ void setup() {
 FastLED.addLeds<NEOPIXEL, LED_PIN>(leds, NUM_LEDS);
 }
 
-void setPixels(int Pixels, byte red, byte green, byte blue){
-leds[Pixels].r = red;
-leds[Pixels].g = green;
-leds[Pixels].b = blue;
+void setPixel(int Pixel, byte red, byte green, byte blue){
+leds[Pixel].r = red;
+leds[Pixel].g = green;
+leds[Pixel].b = blue;
 
 }
 void loop() {
@@ -112,7 +112,6 @@ leds[41] = CRGB::Black;
 FastLED.show();
 delay(1000);
   
-//change the color of all of the LEDS to yellow
 
   //6
   
@@ -238,212 +237,70 @@ delay(1000);
 
   //15, done!
 
-  //setAll(0xff, 0x00, 0x00);
-  //showStrip();
-  //delay(500);
-  //setAll(0x00, 0x00, 0x00);
-  //showStrip();
-  //delay(500);
-  //setAll(0xff, 0x00, 0x00);
-  //showStrip();
-  //delay(500);
-  //setAll(0x00, 0x00, 0x00);
-  //showStrip();
-  //delay(500);
-  //setAll(0xff, 0x00, 0x00);
-  //showStrip();
-  //delay(500);
-  //setAll(0x00, 0x00, 0x00);
-  //showStrip();
-  //delay(500);
-
-  setAll(0x00, 0xff, 0x00);
-  delay(2250);
+  //set the color of all of the LEDS to GREEN
+  //
   
-  //for (int q = 0; q < 1; q++){
-    //for(int p = 0; p < NUM_LEDS; p = p + 1){
-      //setPixels(p+q, 0, 0, 0);
-      //}
-//  }
-//  leds[60] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[59] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[58] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[57] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[56] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[55] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[54] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[53] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[52] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[51] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[50] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[49] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[48] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[47] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[46] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[45] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[44] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[43] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[42] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[41] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[40] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[39] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[38] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[37] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[36] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[35] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[34] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[33] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[32] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[31] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[30] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[29] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[28] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[27] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[26] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[25] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[24] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[23] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[22] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[21] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[20] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[19] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[18] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[17] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[16] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[15] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[14] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[13] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[12] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[11] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[10] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[9] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[8] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[7] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[6] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-
-  //blink red
+  setAll(0x00, 0xff, 0x00);
+  
     
-  for(int o = 60; o >= 6; o--){
+  for(int o = 60; o >= 46; o--){
     leds[o] = CRGB::Black;
     FastLED.show();
     delay(2250);
   }
+  
+leds[45] = CRGB::Black;
+FastLED.show();
+  
+  //change the color of all of the LEDS to YELLOW
+  //
+  
+for(int f = 45; f >= 0; f--)
+setPixel(f, 0xff, 0xff, 0x00);
+
+for(int o = 45; o >= 31; o--){
+    leds[o] = CRGB::Black;
+    FastLED.show();
+    delay(2250);
+}
+
+    leds[30] = CRGB::Black;
+    FastLED.show();
+
+
+//change the color of all of the LEDS to ORANGE
+//
+
+for(int f = 30; f >= 0; f--)
+setPixel(f, 0xff, 0x25, 0x00);
+
+for(int o = 30; o >= 16; o--){
+    leds[o] = CRGB::Black;
+    FastLED.show();
+    delay(2250);
+}
+
+    leds[15] = CRGB::Black;
+    FastLED.show();
+
+//changed the color of the LEDS to RED
+//
+
+for(int f = 15; f >= 0; f--)
+setPixel(f, 0xff, 0x00, 0x00);
+
+for(int o = 15; o >= 5; o--){
+    leds[o] = CRGB::Black;
+    FastLED.show();
+    delay(2250);
+}
+
 
   for(int w = 5; w >= 0; w--){
 //    leds[r] = CRGB::Red;
 //    FastLED.show();
 //    delay(2250);
-     setPixels(w, 0xff, 0x00, 0x00);
+     setPixel(w, 0xff, 0x00, 0x00);
      
     }
   
@@ -452,20 +309,5 @@ for(int r = 5; r >= 0; r--){
     FastLED.show();
     delay(2250);
   }
-
   
-//  leds[5] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[4] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[3] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[2] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
-//  leds[1] = CRGB::Black;
-//  FastLED.show();
-//  delay(2250);
+}

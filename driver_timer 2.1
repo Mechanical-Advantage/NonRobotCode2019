@@ -1,0 +1,90 @@
+//This is the same command as setAll, but with specific pixels.
+//It takes a red, green, and blue byte.
+void loop() {
+  
+  //setAll of the pixels to blue
+  
+  setAll(0x00, 0x00, 0xff);
+  delay(1000);
+
+//create a loop with a variable that counts down by 4,
+//stops, and then resumes counting down by 4 untill there
+//is 1 or 0 pixels left.
+
+for(int f = 60; f >= 1; f = f-4){
+  for(int w = f; w > f-4; w--){
+      leds[w] = CRGB::Black;
+      FastLED.show();
+  }
+      delay(1000);
+}
+
+  //set the color of all of the LEDS to GREEN
+  //
+  
+  setAll(0x00, 0xff, 0x00);
+  
+    
+  for(int o = 60; o >= 46; o--){
+    leds[o] = CRGB::Black;
+    FastLED.show();
+    delay(2250);
+  }
+  
+leds[45] = CRGB::Black;
+FastLED.show();
+  
+  //change the color of all of the LEDS to YELLOW
+  //
+  
+for(int f = 45; f >= 0; f--)
+setPixel(f, 0xff, 0xff, 0x00);
+
+for(int o = 45; o >= 31; o--){
+    leds[o] = CRGB::Black;
+    FastLED.show();
+    delay(2250);
+}
+
+    leds[30] = CRGB::Black;
+    FastLED.show();
+
+
+//change the color of all of the LEDS to ORANGE
+//
+
+for(int f = 30; f >= 0; f--)
+setPixel(f, 0xff, 0x25, 0x00);
+
+for(int o = 30; o >= 16; o--){
+    leds[o] = CRGB::Black;
+    FastLED.show();
+    delay(2250);
+}
+
+    leds[15] = CRGB::Black;
+    FastLED.show();
+
+//changed the color of the LEDS to RED
+//
+
+for(int f = 15; f >= 0; f--)
+setPixel(f, 0xff, 0x00, 0x00);
+
+for(int o = 15; o >= 0; o--){
+    leds[o] = CRGB::Black;
+    FastLED.show();
+    delay(2250);
+}
+
+
+//this changes the last 5 LEDS to black.
+//I still have to make the last 5 LEDS blink, and not count down
+  
+//for(int r = 4; r >= 0; r--){
+//    leds[r] = CRGB::Red;
+//    FastLED.show();
+//    delay(2250);
+//  }
+  
+}

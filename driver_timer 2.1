@@ -1,3 +1,36 @@
+#include <FastLED.h>
+
+#define NUM_LEDS 60
+#define LED_PIN 2
+#define DATA_PIN 7
+
+void showStrip() {
+FastLED.show();
+}
+
+void setAll(byte red, byte green, byte blue) {
+  for(int i = 0; i < NUM_LEDS; i++ ){
+  setPixel(i, red, green, blue);
+    
+  }
+  showStrip();
+}
+
+// The command above says to set all of the pixels to a 
+//combination of a red byte, a green byte, and a blue byte
+
+CRGB leds[NUM_LEDS];
+void setup() {
+FastLED.addLeds<NEOPIXEL, LED_PIN>(leds, NUM_LEDS);
+}
+
+void setPixel(int Pixel, byte red, byte green, byte blue){
+leds[Pixel].r = red;
+leds[Pixel].g = green;
+leds[Pixel].b = blue;
+
+}
+
 //This is the same command as setAll, but with specific pixels.
 //It takes a red, green, and blue byte.
 void loop() {
@@ -11,7 +44,7 @@ void loop() {
 //stops, and then resumes counting down by 4 untill there
 //is 1 or 0 pixels left.
 
-for(int f = 60; f >= 1; f = f-4){
+for(int f = 60; f >= 5; f = f-4){
   for(int w = f; w > f-4; w--){
       leds[w] = CRGB::Black;
       FastLED.show();
@@ -19,6 +52,10 @@ for(int f = 60; f >= 1; f = f-4){
       delay(1000);
 }
 
+
+  setAll(0x00, 0x00, 0x00);
+  delay(1000);
+  
   //set the color of all of the LEDS to GREEN
   //
   
@@ -71,20 +108,30 @@ for(int o = 30; o >= 16; o--){
 for(int f = 15; f >= 0; f--)
 setPixel(f, 0xff, 0x00, 0x00);
 
-for(int o = 15; o >= 0; o--){
+for(int o = 15; o >= 7; o--){
     leds[o] = CRGB::Black;
     FastLED.show();
     delay(2250);
 }
 
+leds[6] = CRGB::Black;
+FastLED.show();
+delay(1500);
 
-//this changes the last 5 LEDS to black.
-//I still have to make the last 5 LEDS blink, and not count down
-  
-//for(int r = 4; r >= 0; r--){
-//    leds[r] = CRGB::Red;
-//    FastLED.show();
-//    delay(2250);
-//  }
-  
+setAll(0xff, 0x00, 0x00);
+delay(1000);
+
+
+for(int f = 60; f >= 5; f = f-4){
+  for(int w = f; w > f-4; w--){
+      leds[w] = CRGB::Black;
+      FastLED.show();
+  }
+      delay(1000);
+} 
+
+for(int a = 15; a >= 0; a--)
+setPixel(a, 0x00, 0x00, 0x00);
+delay(1000);
+
 }

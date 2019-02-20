@@ -1,0 +1,282 @@
+#include <FastLED.h>
+
+#define NUM_LEDS 60
+#define LED_PIN 2
+#define DATA_PIN 7
+
+void showStrip() {
+  FastLED.show();
+}
+
+void setAll(byte red, byte green, byte blue) {
+  for (int i = 0; i < NUM_LEDS; i++ ) {
+    setPixel(i, red, green, blue);
+
+  }
+  showStrip();
+}
+
+// The command above says to set all of the pixels to a
+//combination of a red byte, a green byte, and a blue byte
+
+CRGB leds[NUM_LEDS];
+void setup() {
+  FastLED.addLeds<NEOPIXEL, LED_PIN>(leds, NUM_LEDS);
+
+  Serial.begin(115200);
+}
+
+
+void setPixel(int Pixel, byte red, byte green, byte blue) {
+  leds[Pixel].r = red;
+  leds[Pixel].g = green;
+  leds[Pixel].b = blue;
+
+  //a byte has two place values, each with 15 different numbers:
+  //1 = 1
+  //2 = 2
+  // ...
+  //9 = 9
+  //a = 10
+  //b = 11
+  //c = 12
+  // ...
+  //f = 15
+
+}
+
+//This is the same command as setAll, but with specific pixels.
+//It takes a red, green, and blue byte.
+
+void loop() {
+
+
+  //set the color of all of the LEDS to GREEN
+
+  
+  //time in auto
+
+  setAll(0x00, 0x1f, 0xff);
+  delay(1000);
+
+  //15
+
+  leds[59] = CRGB::Black;
+  FastLED.show();
+  leds[58] = CRGB::Black;
+  FastLED.show();
+
+  leds[0] = CRGB::Black;
+  FastLED.show();
+  leds[1] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+  //14
+
+  leds[57] = CRGB::Black;
+  FastLED.show();
+  leds[56] = CRGB::Black;
+  FastLED.show();
+
+  leds[2] = CRGB::Black;
+  FastLED.show();
+  leds[3] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+  //13
+
+  leds[55] = CRGB::Black;
+  FastLED.show();
+  leds[54] = CRGB::Black;
+  FastLED.show();
+
+  leds[4] = CRGB::Black;
+  FastLED.show();
+  leds[5] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+  //12
+
+  leds[53] = CRGB::Black;
+  FastLED.show();
+  leds[52] = CRGB::Black;
+  FastLED.show();
+
+  leds[6] = CRGB::Black;
+  FastLED.show();
+  leds[7] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+  //11
+
+
+  leds[51] = CRGB::Black;
+  FastLED.show();
+  leds[50] = CRGB::Black;
+  FastLED.show();
+
+  leds[8] = CRGB::Black;
+  FastLED.show();
+  leds[9] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+
+  //10
+
+
+  leds[49] = CRGB::Black;
+  FastLED.show();
+  leds[48] = CRGB::Black;
+  FastLED.show();
+
+  leds[10] = CRGB::Black;
+  FastLED.show();
+  leds[11] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+  //9
+
+  leds[47] = CRGB::Black;
+  FastLED.show();
+  leds[46] = CRGB::Black;
+  FastLED.show();
+
+  leds[12] = CRGB::Black;
+  FastLED.show();
+  leds[13] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+  //8
+
+  leds[45] = CRGB::Black;
+  FastLED.show();
+  leds[44] = CRGB::Black;
+  FastLED.show();
+
+  leds[14] = CRGB::Black;
+  FastLED.show();
+  leds[15] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+  //7
+
+  leds[43] = CRGB::Black;
+  FastLED.show();
+  leds[42] = CRGB::Black;
+  FastLED.show();
+
+  leds[16] = CRGB::Black;
+  FastLED.show();
+  leds[17] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+  //6
+
+
+  leds[41] = CRGB::Black;
+  FastLED.show();
+  leds[40] = CRGB::Black;
+  FastLED.show();
+
+  leds[18] = CRGB::Black;
+  FastLED.show();
+  leds[19] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+  //5
+
+  leds[39] = CRGB::Black;
+  FastLED.show();
+  leds[38] = CRGB::Black;
+  FastLED.show();
+
+  leds[20] = CRGB::Black;
+  FastLED.show();
+  leds[21] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+  //4
+
+  leds[37] = CRGB::Black;
+  FastLED.show();
+  leds[36] = CRGB::Black;
+  FastLED.show();
+
+  leds[22] = CRGB::Black;
+  FastLED.show();
+  leds[23] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+  //3
+
+  leds[35] = CRGB::Black;
+  FastLED.show();
+  leds[34] = CRGB::Black;
+  FastLED.show();
+
+  leds[24] = CRGB::Black;
+  FastLED.show();
+  leds[25] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+
+  //2
+
+  leds[33] = CRGB::Black;
+  FastLED.show();
+  leds[32] = CRGB::Black;
+  FastLED.show();
+
+  leds[26] = CRGB::Black;
+  FastLED.show();
+  leds[27] = CRGB::Black;
+  FastLED.show();
+  delay(1000);
+  //1
+
+  leds[31] = CRGB::Black;
+  FastLED.show();
+  leds[30] = CRGB::Black;
+  FastLED.show();
+
+  leds[28] = CRGB::Black;
+  FastLED.show();
+  leds[29] = CRGB::Black;
+  FastLED.show();
+  leds[30] = CRGB::Black;
+  FastLED.show();
+
+  int high = 59;
+  int low = 0;
+
+  setAll(0x00, 0xff, 0x00);
+
+  for (int i = 30; i >= 0; i = i--) {
+
+  leds[high] = CRGB::Black;
+  FastLED.show();
+  leds[low] = CRGB::Black;
+  FastLED.show();
+  high = high - 1;
+  low = low + 1;
+  delay(4500);
+
+  Serial.println("low:");
+  Serial.println(low);
+  Serial.println("high:");
+  Serial.println(high);
+  }
+
+}
